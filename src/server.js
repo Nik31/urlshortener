@@ -1,8 +1,10 @@
 const express = require('express')
-const {db} = require('./models/db')
 const linkRoute = require('./routes/links')
 
 app = express()
+
+
+app.use(express.json())
 
 
 //routes
@@ -12,13 +14,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/links', linkRoute);
 
-db.sync()
-    .then(() => {
-        console.log("db works");
-    })
-    .catch((err) => {
-        console.log("no it doesnt because " + err );
-    })
 app.listen(6060, () => {
     console.log("Server Running");
 })
