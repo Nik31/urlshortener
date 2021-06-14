@@ -22,6 +22,7 @@ Curl command for hittinng the call
 
 ```
 postman collection link:  https://www.getpostman.com/collections/f6f5e01e2741ff3ab11f
+
 Build the docker image from dockerfile and run it
 ```
     docker build -t infra-cloud-urlshortener .
