@@ -1,13 +1,17 @@
-Login to postgres from mac 
+To install dependencies
 ```
-    psql postgres
-```
-
-Create database
-```
-    create database urlshortener
+    npm install
 ```
 
-create user nikhil with encrypted password 'nikhil'
+Build the docker image from dockerfile and run it
+```
+    docker build -t infra-cloud-urlshortener .
+    docker run -p 8080:6060 infra-cloud-urlshortener
+```
 
-grant all privileges on database urlshortener to nikhil
+Pull the docker from docker hub
+```
+docker image pull nikpras31/infra-cloud-urlshortener
+docker run -p 8080:6060 nikpras31/infra-cloud-urlshortener
+
+``` 
